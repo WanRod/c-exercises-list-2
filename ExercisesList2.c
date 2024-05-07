@@ -18,7 +18,7 @@ void question1()
     }
 
     printf("\n");
-    
+
     for (i = 0; i < 6; i++)
     {
         printf("The number in position %d of the array is: %d\n", i, numbers[i]);
@@ -34,7 +34,7 @@ void question2()
 
     printf("Enter the first word: ");
     fflush(stdin);
-    scanf("%s", word1);   
+    scanf("%s", word1);
 
     printf("Enter the second word: ");
     fflush(stdin);
@@ -74,10 +74,10 @@ void question3()
     printf("********* Question 3 - Read a set of real numbers and print their squares *********\n\n");
 
     for (i = 0; i < 10; i++)
-    {     
+    {
         printf("Enter the %dº number: ", i + 1);
         scanf("%lf", &set[i]);
-    
+
         setOfSquares[i] = set[i] * set[i];
     }
 
@@ -177,7 +177,7 @@ void question6()
     maxPosition = minPosition = 0;
 
     printf("\n");
-    
+
     for (i = 0; i < 10; i++)
     {
         printf("The element %d of the vector is %.2lf\n", i, numbers[i]);
@@ -213,7 +213,7 @@ void question7()
     {
         printf("Enter the %dº grade: ", i + 1);
         scanf("%lf", &grades[i]);
-    
+
         average += grades[i];
     }
 
@@ -228,7 +228,7 @@ void question8()
     double positiveNumbersSum = 0;
     int i, negativeNumbers = 0;
 
-    printf("********* Question 8 -  *********\n\n");
+    printf("********* Question 8 - Read a vector with 10 real numbers, print the number of negative numbers and the sum of positive numbers *********\n\n");
 
     for (i = 0; i < 10; i++)
     {
@@ -253,10 +253,10 @@ void question8()
 void question9()
 {
     double numbers[5];
-    int smallestNumberPosition = 0, largestNumberPosition = 0; 
+    int smallestNumberPosition = 0, largestNumberPosition = 0;
     int i;
 
-    printf("********* Question 9 - *********\n\n");
+    printf("********* Question 9 - Read 5 values and print the position of the largest and smallest value*********\n\n");
 
     for (i = 0; i < 5; i++)
     {
@@ -291,7 +291,7 @@ void question10()
     double numbers[10];
     int i;
 
-    printf("********* Question 10 - *********\n\n");
+    printf("********* Question 10 - Read 10 values and set all negative values to 0 *********\n\n");
 
     for (i = 0; i < 10; i++)
     {
@@ -315,30 +315,30 @@ void question11()
     double numbers[5];
     int i, code;
 
-    printf("********* Question 11 - *********\n\n");
+    printf("********* Question 11 - Read 5 real numbers and show a selection menu *********\n\n");
 
     for (i = 0; i < 5; i++)
     {
         printf("Enter a real number: ");
         scanf("%lf", &numbers[i]);
     }
-  
+
     printf("\nEnter the code (0 - exit | 1 - Print the numbers in order | 2 - Print numbers in reverse order): ");
     scanf("%d", &code);
 
-    while (code != 0 && code != 1 && code !=2)
+    while (code != 0 && code != 1 && code != 2)
     {
         printf("\nInvalid code, try again: ");
         scanf("%d", &code);
     }
-        
+
     if (code == 1)
     {
         printf("\n--- Numbers in order ---");
         for (i = 0; i < 5; i++)
         {
             printf("\nElement %d: %.2lf", i, numbers[i]);
-        } 
+        }
     }
     else if (code == 2)
     {
@@ -355,7 +355,7 @@ void question12()
     double matrix[4][4];
     int i, j, numbersGreatherThan10 = 0;
 
-    printf("********* Question 12 - *********\n\n");
+    printf("********* Question 12 - Read a 4 x 4 matrix, count and write how many values greater than 10 it has *********\n\n");
 
     for (i = 0; i < 4; i++)
     {
@@ -379,7 +379,7 @@ void question12()
     {
         printf("\n\nIn the inserted matrix there is 1 number greater than 10.");
     }
-    else 
+    else
     {
         printf("\n\nIn the inserted matrix there are %d numbers greater than 10.", numbersGreatherThan10);
     }
@@ -390,7 +390,7 @@ void question13()
     int matrix[5][5];
     int i, j;
 
-    printf("********* Question 13 - *********\n\n");
+    printf("********* Question 13 - Print a 5x5 identity matrix *********\n\n");
 
     printf("----- Matrix -----\n");
 
@@ -409,7 +409,7 @@ void question13()
         }
 
         printf("\n");
-    }    
+    }
 }
 
 void question14()
@@ -420,16 +420,16 @@ void question14()
     int max_col = 0;
     int i, j;
 
-    printf("********* Question 14 - *********\n\n");
+    printf("********* Question 14 - Read a 4x4 matrix and print the position of the largest value *********\n\n");
 
-    for (i = 0; i < 4; i++) 
+    for (i = 0; i < 4; i++)
     {
-        for (j = 0; j < 4; j++) 
+        for (j = 0; j < 4; j++)
         {
             printf("Enter the value of row %d and column %d of the matrix: ", i + 1, j + 1);
             scanf("%lf", &matrix[i][j]);
 
-            if (matrix[i][j] > maxValue) 
+            if (matrix[i][j] > maxValue)
             {
                 maxValue = matrix[i][j];
                 max_row = i + 1;
@@ -440,9 +440,9 @@ void question14()
 
     printf("\n--- Matrix entered ---\n");
 
-    for (i = 0; i < 4; i++) 
+    for (i = 0; i < 4; i++)
     {
-        for (j = 0; j < 4; j++) 
+        for (j = 0; j < 4; j++)
         {
             printf("%.2lf ", matrix[i][j]);
         }
@@ -457,13 +457,13 @@ void question15()
 {
     int matrix[5][5];
     int i, j, valueX;
-    int row = 0, col = 0, found = 0; 
+    int row = 0, col = 0, found = 0;
 
-    printf("********* Question 15 - *********\n\n");
+    printf("********* Question 15 - Read a 5x5 matrix and search for a value inserted in the matrix *********\n\n");
 
-    for (i = 0; i < 5; i++) 
+    for (i = 0; i < 5; i++)
     {
-        for (j = 0; j < 5; j++) 
+        for (j = 0; j < 5; j++)
         {
             printf("Enter the value of row %d and column %d of the matrix: ", i + 1, j + 1);
             scanf("%d", &matrix[i][j]);
@@ -473,29 +473,29 @@ void question15()
     printf("\nEnter the value to search (X): ");
     scanf("%d", &valueX);
 
-    for (i = 0; i < 5; i++) 
+    for (i = 0; i < 5; i++)
     {
-        for (j = 0; j < 5; j++) 
+        for (j = 0; j < 5; j++)
         {
-            if (matrix[i][j] == valueX) 
+            if (matrix[i][j] == valueX)
             {
                 found = 1;
                 row = i + 1;
                 col = j + 1;
-                break; 
+                break;
             }
         }
-        if (found == 1) 
+        if (found == 1)
         {
             break;
         }
     }
 
-    if (found == 1) 
+    if (found == 1)
     {
         printf("\nThe value %d is located at row %d and column %d.\n", valueX, row, col);
     }
-    else 
+    else
     {
         printf("\nThe value %d was not found in the matrix.\n", valueX);
     }
@@ -506,11 +506,11 @@ void question16()
     int firstMatrix[4][4], secondMatrix[4][4], thirdMatrix[4][4];
     int i, j;
 
-    printf("********* Question 16 - *********\n\n");
+    printf("********* Question 16 - Read two 4x4 matrices and print a matrix whose elements are the largest values in each matrix *********\n\n");
 
-    for (i = 0; i < 4; i++) 
+    for (i = 0; i < 4; i++)
     {
-        for (j = 0; j < 4; j++) 
+        for (j = 0; j < 4; j++)
         {
             printf("Enter the value of row %d and column %d of the first matrix: ", i + 1, j + 1);
             scanf("%d", &firstMatrix[i][j]);
@@ -519,9 +519,9 @@ void question16()
 
     printf("\n");
 
-    for (i = 0; i < 4; i++) 
+    for (i = 0; i < 4; i++)
     {
-        for (j = 0; j < 4; j++) 
+        for (j = 0; j < 4; j++)
         {
             printf("Enter the value of row %d and column %d of the second matrix: ", i + 1, j + 1);
             scanf("%d", &secondMatrix[i][j]);
@@ -541,7 +541,7 @@ void question16()
 
     for (i = 0; i < 4; i++)
     {
-        for (j = 0; j < 4; j++) 
+        for (j = 0; j < 4; j++)
         {
             printf("%5d", thirdMatrix[i][j]);
         }
@@ -555,11 +555,11 @@ void question17()
     int matrix[3][3];
     int i, j, mainDiagonalSum = 0;
 
-    printf("********* Question 17 - *********\n\n");
+    printf("********* Question 17 - Read a 3 x 3 matrix and calculate the sum of the elements that are on the main diagonal *********\n\n");
 
-    for (i = 0; i < 3; i++) 
+    for (i = 0; i < 3; i++)
     {
-        for (j = 0; j < 3; j++) 
+        for (j = 0; j < 3; j++)
         {
             printf("Enter the value of row %d and column %d of the matrix: ", i + 1, j + 1);
             scanf("%d", &matrix[i][j]);
@@ -570,7 +570,7 @@ void question17()
             }
         }
     }
-    
+
     printf("\n\nThe sum of the main diagonal values is: %d", mainDiagonalSum);
 }
 
@@ -579,13 +579,13 @@ void question18()
     int matrix[4][4], lowerTriangularMatrix[4][4];
     int i, j;
 
-    printf("********* Question 18 - *********\n\n");
+    printf("********* Question 18 - Generate a 4x4 matrix with numbers from 1 to 20 and reset the elements above the main diagonal *********\n\n");
 
     srand(time(NULL));
 
-    for (i = 0; i < 4; i++) 
+    for (i = 0; i < 4; i++)
     {
-        for (j = 0; j < 4; j++) 
+        for (j = 0; j < 4; j++)
         {
             matrix[i][j] = rand() % 20 + 1;
 
@@ -602,9 +602,9 @@ void question18()
 
     printf("\n----- Matrix -----\n");
 
-    for (i = 0; i < 4; i++) 
+    for (i = 0; i < 4; i++)
     {
-        for (j = 0; j < 4; j++) 
+        for (j = 0; j < 4; j++)
         {
             printf("%4d", matrix[i][j]);
         }
@@ -614,9 +614,9 @@ void question18()
 
     printf("\n----- Lower triangular matrix -----\n");
 
-    for (i = 0; i < 4; i++) 
+    for (i = 0; i < 4; i++)
     {
-        for (j = 0; j < 4; j++) 
+        for (j = 0; j < 4; j++)
         {
             printf("%4d", lowerTriangularMatrix[i][j]);
         }
@@ -632,7 +632,7 @@ void question19()
     double finalGradesAverage = 0;
     int i, j;
 
-    printf("********* Question 19 - *********\n\n");
+    printf("********* Question 19 - Read a student grade table and print your final grades *********\n\n");
 
     for (i = 0; i < 5; i++)
     {
@@ -654,8 +654,8 @@ void question19()
                 scanf("%d", &matrix[i][j]);
             }
         }
-        
-        matrix[i][3] = matrix[i][1] + matrix[i][2]; 
+
+        matrix[i][3] = matrix[i][1] + matrix[i][2];
 
         finalGradesAverage += matrix[i][3];
         printf("\n");
@@ -667,12 +667,12 @@ void question19()
 
     for (i = 0; i < 5; i++)
     {
-        if(matrix[i][3] > matrix[highestFinalGradePosition][3])
+        if (matrix[i][3] > matrix[highestFinalGradePosition][3])
         {
             highestFinalGradePosition = i;
         }
     }
-    
+
     printf("The student with enrollment number %d obtained the highest final grade, which is: %d", matrix[highestFinalGradePosition][0], matrix[highestFinalGradePosition][3]);
 
     printf("\n\nThe average of the final grades is: %.2lf", finalGradesAverage);
@@ -681,137 +681,599 @@ void question19()
 int main()
 {
     int question;
+    char continueExercise, comeBackToMenu;
 
     setlocale(LC_ALL, "");
 
-    printf("******** Exercises list 2 - Vectors and Matrices ********\n\n");
-
-    printf("Select a question (1 - 20): ");
-    scanf("%d", &question);
-
-    switch (question)
+    do
     {
-        case 1:
-            system("cls");
+        system("cls");
 
-            question1();
-            break;
+        printf("******** Exercises list 2 - Vectors and Matrices ********\n\n");
 
-        case 2:
-            system("cls");
-            
-            question2();
-            break;
+        printf("Select a question (1 - 20): ");
+        scanf("%d", &question);
 
-        case 3:
-            system("cls");
-            
-            question3();
-            break;
+        switch (question)
+        {
+            case 1:
+                do
+                {
+                    system("cls");
 
-        case 4:
-            system("cls");
-            
-            question4();
-            break;
+                    question1();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
 
-        case 5:
-            system("cls");
-            
-            question5();
-            break;    
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
 
-        case 6:
-            system("cls");
-            
-            question6();
-            break;  
+                    printf("\n");
 
-        case 7:
-            system("cls");
-            
-            question7();
-            break;  
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
 
-        case 8:
-            system("cls");
-            
-            question8();
-            break;
+                } while (continueExercise == 'y' || continueExercise == 'Y');
 
-        case 9:
-            system("cls");
-            
-            question9();
-            break;    
+                break;
 
-        case 10:
-            system("cls");
-            
-            question10();
-            break;  
+            case 2:
+                do
+                {
+                    system("cls");
 
-        case 11:
-            system("cls");
-            
-            question11();
-            break;  
+                    question2();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
 
-        case 12:
-            system("cls");
-            
-            question12();
-            break;
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
 
-        case 13:
-            system("cls");
-            
-            question13();
-            break;    
+                    printf("\n");
 
-        case 14:
-            system("cls");
-            
-            question14();
-            break;  
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
 
-        case 15:
-            system("cls");
-            
-            question15();
-            break;  
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+                
+                break;
 
-        case 16:
-            system("cls");
-            
-            question16();
-            break;
+            case 3:
+                do
+                {
+                    system("cls");
 
-        case 17:
-            system("cls");
-            
-            question17();
-            break;    
+                    question3();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
 
-        case 18:
-            system("cls");
-            
-            question18();
-            break;  
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
 
-        case 19:
-            system("cls");
-            
-            question19();
-            break;  
+                    printf("\n");
 
-        case 20:
-            break;  
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
 
-        default:
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 4:
+                do
+                {
+                    system("cls");
+
+                    question4();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 5:
+                do
+                {
+                    system("cls");
+
+                    question5();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 6:
+                do
+                {
+                    system("cls");
+
+                    question6();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 7:
+                do
+                {
+                    system("cls");
+
+                    question7();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 8:
+                do
+                {
+                    system("cls");
+
+                    question8();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 9:
+                do
+                {
+                    system("cls");
+
+                    question9();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 10:
+                do
+                {
+                    system("cls");
+
+                    question10();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 11:
+                do
+                {
+                    system("cls");
+
+                    question11();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 12:
+                do
+                {
+                    system("cls");
+
+                    question12();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 13:
+                do
+                {
+                    system("cls");
+
+                    question13();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 14:
+                do
+                {
+                    system("cls");
+
+                    question14();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 15:
+                do
+                {
+                    system("cls");
+
+                    question15();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 16:
+                do
+                {
+                    system("cls");
+
+                    question16();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 17:
+                do
+                {
+                    system("cls");
+
+                    question17();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 18:
+                do
+                {
+                    system("cls");
+
+                    question18();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 19:
+                do
+                {
+                    system("cls");
+
+                    question19();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
+                break;
+
+            case 20:
+                break;
+
+            default:
+                printf("\nInvalid entry.");
+                break;
+        }
+
+        printf("\n\nDo you want to go back to the start menu (y/n): ");
+        fflush(stdin);
+        scanf("%c", &comeBackToMenu);
+
+        if (comeBackToMenu == 'n' || comeBackToMenu == 'Y')
+        {
             system("exit");
-            break;
-    }
-    
+        }
+
+        printf("\n");
+
+        while (comeBackToMenu != 'y' && comeBackToMenu != 'n' && comeBackToMenu != 'Y' && comeBackToMenu != 'N')
+        {
+            printf("Invalid entry, please enter 'y' or 'n': ");
+            fflush(stdin);
+            scanf("%c", &comeBackToMenu);
+        }
+
+    } while (comeBackToMenu == 'y' || comeBackToMenu == 'Y');
+
     return 0;
 }
