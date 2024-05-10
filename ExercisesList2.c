@@ -414,7 +414,7 @@ void question13()
 
 void question14()
 {
-    double matrix[4][4];
+    double matrix[4][4] = {0};
     double maxValue = matrix[0][0];
     int max_row = 0;
     int max_col = 0;
@@ -444,7 +444,12 @@ void question14()
     {
         for (j = 0; j < 4; j++)
         {
-            printf("%.2lf ", matrix[i][j]);
+            printf("%.2lf", matrix[i][j]);
+            
+            if(j != 3)
+            {
+                printf(" | ");
+            }
         }
 
         printf("\n");
@@ -676,6 +681,42 @@ void question19()
     printf("The student with enrollment number %d obtained the highest final grade, which is: %d", matrix[highestFinalGradePosition][0], matrix[highestFinalGradePosition][3]);
 
     printf("\n\nThe average of the final grades is: %.2lf", finalGradesAverage);
+}
+
+void question20()
+{
+    int studentAnswers[10], templateAnswers[10];
+    int i, numberOfCorrectAnswers = 0;
+
+    printf("********* Question 20 - Correct a test with 10 multiple choice questions *********\n\n");
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("Enter the correct asnwers of the question %d (A -> 1 | B -> 2 | C -> 3 | D -> 4): ", i + 1);
+        scanf("%d", &templateAnswers[i]);
+    }
+
+    printf("\n");
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("Enter the student asnwers of the question %d (A -> 1 | B -> 2 | C -> 3 | D -> 4): ", i + 1);
+        scanf("%d", &studentAnswers[i]);
+
+        if (templateAnswers[i] == studentAnswers[i])
+        {
+            numberOfCorrectAnswers++;
+        }
+    }
+    
+    if (numberOfCorrectAnswers < 7)
+    {
+        printf("\n\nThe student was disapproved with %d correct answers.", numberOfCorrectAnswers);
+    }
+    else
+    {
+        printf("\n\nThe student was approved with %d correct answers.", numberOfCorrectAnswers);
+    }
 }
 
 int main()
@@ -1248,6 +1289,32 @@ int main()
                 break;
 
             case 20:
+                do
+                {
+                    system("cls");
+
+                    question20();
+                    
+                    printf("\n\nDo you wanna repeat the exercise (y/n): ");
+                    fflush(stdin);
+                    scanf("%c", &continueExercise);
+
+                    if (continueExercise == 'n' || continueExercise == 'N')
+                    {
+                        break;
+                    }
+
+                    printf("\n");
+
+                    while (continueExercise != 'y' && continueExercise != 'n' && continueExercise != 'Y' && continueExercise != 'N')
+                    {
+                        printf("Invalid input. Please enter 'y' or 'n': ");
+                        fflush(stdin);
+                        scanf("%c", &continueExercise);
+                    }
+
+                } while (continueExercise == 'y' || continueExercise == 'Y');
+
                 break;
 
             default:
